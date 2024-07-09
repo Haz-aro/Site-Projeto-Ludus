@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Ludus - Biblioteca</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="imagens/steam.png" alt="Projeto Ludus"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="library.html">Biblioteca</a></li>
+                <li><a href="community.html">Comunidade</a></li>
+                <li><a href="support.html">Suporte</a></li>
+            </ul>
+        </nav>
+        <div class="auth-buttons">
+            <button id="loginBtn" onclick="openLoginModal()">Entrar</button>
+            <button id="logoutBtn" style="display: none;" onclick="handleLogout()">Sair</button>
+        </div>
+    </header>
+
+    <main>
+        <h1>Biblioteca</h1>
+        <p>Acesse todos os seus jogos em um só lugar.</p>
+
+        <section class="user-library">
+            <h2 class="featured-title">Minha Biblioteca</h2>
+            <div class="user-library-container">
+                <div class="game">
+                    <img src="imagens/DOOMETERNAL.PNG" alt="Doom Eternal">
+                    <h3>Doom Eternal</h3>
+                    <div class="game-buttons">
+                        <button id="installBtn1" onclick="handleInstallClick(1)">Instalar</button>
+                        <button id="playNowBtn1" style="display: none;" onclick="handlePlayNowClick(1)">Jogue agora</button>
+                    </div>
+                </div>
+                <!-- Adicione mais jogos conforme necessário -->
+            </div>
+        </section>
+        
+        
+
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Projeto Ludus. Todos os direitos reservados.</p>
+    </footer>
+</body>
+
+<div id="loginModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeLoginModal()">&times;</span>
+        <div class="login-container">
+            <form id="loginForm">
+                <label for="username">Nome de usuário:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="button" onclick="handleLogin()">Entrar</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="scripts.js"></script>
+</html>

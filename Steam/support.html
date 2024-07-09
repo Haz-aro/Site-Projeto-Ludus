@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Ludus - Suporte</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="imagens/steam.png" alt="Projeto Ludus"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="library.html">Biblioteca</a></li>
+                <li><a href="community.html">Comunidade</a></li>
+                <li><a href="support.html">Suporte</a></li>
+            </ul>
+        </nav>
+        <div class="login">
+            <a href="login.html"><button>Entrar</button></a>
+        </div>
+    </header>
+
+    <main>
+        <h1>Suporte</h1>
+
+        <section class="support-content">
+            <h2>Entre em Contato</h2>
+            <p>Estamos sempre disponíveis para ajudar você com qualquer problema ou dúvida que possa ter. Entre em contato conosco através dos seguintes meios:</p>
+            <ul>
+                <li><strong>Email:</strong> suporte@projetoludus.com</li>
+                <li><strong>Telefone:</strong> +55 32 1234-5678</li>
+            </ul>
+        </section>
+
+        <section class="faq">
+            <h2>Perguntas Frequentes</h2>
+            <p>Aqui estão algumas respostas para perguntas comuns que nossos usuários costumam fazer:</p>
+            <ul>
+                <li><strong>Como faço para recuperar minha senha?</strong><br> Você pode recuperar sua senha na página de login clicando em "Esqueci minha senha". Um email será enviado para o endereço registrado com instruções para a recuperação.</li>
+                <li><strong>Como posso alterar as informações da minha conta?</strong><br> Você pode atualizar suas informações pessoais, incluindo senha e detalhes de pagamento, na seção de configurações da sua conta.</li>
+                <li><strong>Meus jogos não estão sendo exibidos corretamente na biblioteca. O que devo fazer?</strong><br> Se você está enfrentando problemas técnicos como este, recomendamos verificar os requisitos mínimos do sistema dos jogos e também tentar reinstalá-los para resolver possíveis problemas de cache.</li>
+            </ul>
+        </section>
+
+        <section class="contact-form">
+            <h2>Formulário de Contato</h2>
+            <p>Se preferir, você pode nos enviar uma mensagem diretamente através deste formulário. Responderemos o mais breve possível!</p>
+            <form action="submit_form.php" method="POST">
+                <label for="name">Nome:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+                <label for="message">Mensagem:</label><br>
+                <textarea id="message" name="message" rows="4" required></textarea><br><br>
+                <button type="submit">Enviar Mensagem</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Projeto Ludus. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        background-color: #1b2838;
+        margin: 0;
+        padding: 0;
+    }
+    
+    header {
+        background-color: #171a21;
+        color: #ffffff;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .logo img {
+        width: 60px;
+    }
+    
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+    
+    nav ul li {
+        margin-right: 20px;
+    }
+    
+    nav ul li a {
+        text-decoration: none;
+        color: #ffffff;
+        font-weight: bold;
+        font-size: 16px;
+        transition: color 0.3s ease;
+    }
+    
+    nav ul li a:hover {
+        color: #3c7f99;
+    }
+    
+    .login button {
+        background-color: #3c7f99;
+        color: #ffffff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+    }
+    
+    .login button:hover {
+        background-color: #2a475e;
+    }
+    
+    main {
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 36px;
+        color: #ffffff;
+        margin-bottom: 20px;
+    }
+    
+    p {
+        font-size: 18px;
+        color: #ffffff;
+        line-height: 1.6;
+    }
+    
+    section {
+        margin-bottom: 40px;
+    }
+    
+    .support-content, .faq, .contact-form {
+        background-color: #101d2c;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    .support-content h2, .faq h2, .contact-form h2 {
+        font-size: 24px;
+        color: #ffffff;
+        margin-bottom: 15px;
+    }
+    
+    .support-content p, .faq p {
+        font-size: 18px;
+        color: #ffffff;
+        line-height: 1.6;
+    }
+    
+    .faq ul {
+        padding-left: 20px;
+    }       
+    
+    .faq li {
+        margin-bottom: 10px;
+    }
+    
+    .faq strong {
+        color: #ffffff;
+    }
+    
+    .contact-form label {
+        font-size: 18px;
+        color: #ffffff;
+        margin-bottom: 8px;
+    }
+    
+    .contact-form input, .contact-form textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+    
+    .contact-form textarea {
+        resize: vertical;
+        min-height: 150px;
+    }
+    
+    .contact-form button {
+        background-color: #3c7f99;
+        color: #ffffff;
+        border: none;
+        padding: 12px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+    }
+    
+    .contact-form button:hover {
+        background-color: #2a475e;
+    }
+    
+    footer {
+    background-color: #171a21;
+    text-align: center;
+    padding: 20px;
+    color: #c7d5e0;
+}
+    
+    footer p {
+        margin: 0;
+    }
+</style>

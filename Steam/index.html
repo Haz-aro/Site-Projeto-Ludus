@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Ludus - Início</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="imagens/steam.png" alt="Projeto Ludus"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="library.html">Biblioteca</a></li>
+                <li><a href="community.html">Comunidade</a></li>
+                <li><a href="support.html">Suporte</a></li>
+            </ul>
+        </nav>
+        <div class="auth-buttons">
+            <button id="loginBtn" onclick="openLoginModal()">Entrar</button>
+            <button id="logoutBtn" style="display: none;" onclick="handleLogout()">Sair</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="banner">
+            <h1>Bem-vindo ao Projeto Ludus</h1>
+            <p>Seu hub de jogos e comunidade ao melhor preço do mercado!</p>
+        </section>
+        
+        <section class="carousel">
+            <h2 class="featured-title">Jogos em Destaque</h2>
+            <div class="carousel-container">
+                <div class="carousel-inner">
+                    <div class="game" onclick="window.location.href='doom.html'">
+                        <img src="imagens/DOOMETERNAL.PNG" alt="Doom Eternal">
+                        <h3>Doom Eternal</h3>
+                        <p>Preço: R$ 99,99</p>
+                    </div>
+                    <div class="game" onclick="window.location.href='ghost.html'">
+                        <img src="imagens/ghost.png" alt="Ghost Of Tsushima">
+                        <h3>Ghost Of Tsushima</h3>
+                        <p>Preço: R$ 129,99</p>
+                    </div>
+                    <div class="game" onclick="window.location.href='hollow.html'">
+                        <img src="imagens/hollow.png" alt="Hollow Knight">
+                        <h3>Hollow Knight</h3>
+                        <p>Preço: R$ 79,99</p>
+                    </div>
+                    <div class="game" onclick="window.location.href='godofwar.html'">
+                        <img src="imagens/GOW1.PNG" alt="God of War Ragnarock">
+                        <h3>God of War </h3>
+                        <p>Preço: R$ 149,99</p>
+                    </div>
+                    <div class="game" onclick="window.location.href='godofwar.html'">
+                        <img src="imagens/GOW2.PNG" alt="God of War Ragnarock">
+                        <h3>God of War Ragnarock</h3>
+                        <p>Preço: R$ 149,99</p>
+                    </div>
+                    
+                </div>
+                <button class="carousel-prev" onclick="moveCarousel(-1, '.carousel')">&#10094;</button>
+                <button class="carousel-next" onclick="moveCarousel(1, '.carousel')">&#10095;</button>
+            </div>
+        </section>
+
+        <section class="soulslike-carousel">
+            <h2 class="featured-title">SOULSLIKE Games</h2>
+            <div class="soulslike-carousel-container">
+                <div class="soulslike-carousel-inner">
+                    <div class="soulslike-game" onclick="window.location.href='doom.html'">
+                        <img src="imagens/DS1.PNG" alt="Dark Souls 1">
+                        <h3>DARK SOULS™: REMASTERED</h3>
+                        <p>Preço: R$ 99,99</p>
+                    </div>
+                    <div class="soulslike-game" onclick="window.location.href='ghost.html'">
+                        <img src="imagens/DS2.PNG" alt="Dark Souls II">
+                        <h3>DARK SOULS™ II: Scholar of the First Sin</h3>
+                        <p>Preço: R$ 251,99</p>
+                    </div>
+                    <div class="soulslike-game" onclick="window.location.href='hollow.html'">
+                        <img src="imagens/DS3.PNG" alt="Hollow Knight">
+                        <h3>DARK SOULS™ III</h3>
+                        <p>Preço: R$ 79,99</p>
+                    </div>
+                    <div class="soulslike-game" onclick="window.location.href='godofwar.html'">
+                        <img src="imagens/sote.png" alt="God of War Ragnarock">
+                        <h3>Elden Ring Shadow of the Erdtree</h3>
+                        <p>Preço: R$ 149,99</p>
+                    </div>
+                    <div class="soulslike-game" onclick="window.location.href='godofwar.html'">
+                        <img src="imagens/DemonSouls.png" alt="God of War Ragnarock">
+                        <h3>Demon's Souls</h3>
+                        <p>Preço: R$ 149,99</p>
+                    </div>
+                    <div class="soulslike-game" onclick="window.location.href='godofwar.html'">
+                        <img src="imagens/bloodborne1.png" alt="God of War Ragnarock">
+                        <h3>Bloodborne™</h3>
+                        <p>Preço: R$ 149,99</p>
+                    </div>
+                    <div class="soulslike-game" onclick="window.location.href='godofwar.html'">
+                        <img src="imagens/lies of p.png" alt="God of War Ragnarock">
+                        <h3>Lies of P</h3>
+                        <p>Preço: R$ 149,99</p>
+                    </div>
+                </div>
+                <button class="soulslike-carousel-prev" onclick="moveCarousel(-1, '.soulslike-carousel')">&#10094;</button>
+                <button class="soulslike-carousel-next" onclick="moveCarousel(1, '.soulslike-carousel')">&#10095;</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Projeto Ludus. Todos os direitos reservados.</p>
+    </footer>
+
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeLoginModal()">&times;</span>
+            <div class="login-container">
+                <form id="loginForm">
+                    <label for="username">Nome de usuário:</label>
+                    <input type="text" id="username" name="username" required>
+                    <label for="password">Senha:</label>
+                    <input type="password" id="password" name="password" required>
+                    <button type="button" onclick="handleLogin()">Entrar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Ludus - Comunidade</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="imagens/steam.png" alt="Projeto Ludus"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="library.html">Biblioteca</a></li>
+                <li><a href="community.html">Comunidade</a></li>
+                <li><a href="support.html">Suporte</a></li>
+            </ul>
+        </nav>
+        <div class="auth-buttons">
+            <button id="loginBtn" onclick="openLoginModal()">Entrar</button>
+            <button id="logoutBtn" style="display: none;" onclick="handleLogout()">Sair</button>
+        </div>
+    </header>
+
+    <main>
+        <h1>Comunidade</h1>
+        <p>Participe das discussões e conheça outros jogadores.</p>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Projeto Ludus. Todos os direitos reservados.</p>
+    </footer>
+
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeLoginModal()">&times;</span>
+            <div class="login-container">
+                <form id="loginForm">
+                    <label for="username">Nome de usuário:</label>
+                    <input type="text" id="username" name="username" required>
+                    <label for="password">Senha:</label>
+                    <input type="password" id="password" name="password" required>
+                    <button type="button" onclick="handleLogin()">Entrar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>

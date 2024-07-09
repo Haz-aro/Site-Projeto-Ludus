@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Ludus - Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="imagens/steam.png" alt="Projeto Ludus"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="library.html">Biblioteca</a></li>
+                <li><a href="community.html">Comunidade</a></li>
+                <li><a href="support.html">Suporte</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="login-container">
+            <h1>Login</h1>
+            <form id="loginForm" action="javascript:void(0)" onsubmit="handleLogin()">
+                <label for="username">Usuário</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Senha</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Entrar</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Projeto Ludus. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
